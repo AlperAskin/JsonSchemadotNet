@@ -1,0 +1,17 @@
+{
+  "$schema": "adressSchema.json",
+  "type": "object",
+  "properties": {
+    "adress": {
+      "type": "string"
+    },
+    "adress2": {
+      "type": "string"
+    },
+    "zip-code": {
+      "type": "integer",
+      "minimum": 10000
+    }
+  },
+  "required": [ "zip-code" ]
+}

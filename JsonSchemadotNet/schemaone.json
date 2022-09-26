@@ -1,0 +1,29 @@
+{
+  "$schema": "schemaone.json",
+  "title": "patient",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique indentifier",
+      "type": "integer"
+    },
+    "name": {
+      "description": "Patient Name",
+      "type": "string"
+    },
+    "gender": {
+      "description": "Patient gender",
+      "type": "string"
+    },
+    "phone": {
+      "description": "Patient personal phonenumber",
+      "pattern": "^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$",
+      "type": "string"
+    },
+    "adress": {
+      "type":"object",
+      "$ref": "adressSchema.json"
+    }
+  },
+  "required": ["name","gender","phone","adress"]
+}
